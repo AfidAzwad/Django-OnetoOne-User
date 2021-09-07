@@ -1,0 +1,17 @@
+{% extends 'crud/base.html' %}
+
+{%  block body_block %}
+
+<h1> User Profile </h1>
+{% comment %} <h3> User ID : {{ userinfo.id  }} </h3> {% endcomment %}
+<h3> Name : {{ userinfo.name  }} </h3>
+<h3> Username : {{ userinfo.username  }} </h3>
+<h3> User Email : {{ userinfo.email }} </h3>
+<h3> Gender: {{ userinfo.gender  }} </h3>
+<h3> Phone : {{ userinfo.phone  }} </h3>
+<h3> Address : {{ userinfo.address  }} </h3>
+<h3> Date of Birth : {{ userinfo.date_of_birth  }} </h3>
+<a href= " {% url 'crud:update'  %}" class = "btn btn-primary">Update</a>
+<a href= " {% url 'crud:delete'  %}" class = "btn btn-primary">Delete</a>
+
+{%  endblock body_block %}
